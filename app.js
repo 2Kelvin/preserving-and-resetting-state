@@ -25,11 +25,23 @@ function Counter() {
 }
 
 export default function App() {
+  var _React$useState3 = React.useState(true),
+      _React$useState4 = _slicedToArray(_React$useState3, 2),
+      secondCounter = _React$useState4[0],
+      setSecondCounter = _React$useState4[1];
+
   return React.createElement(
     "div",
     { className: "app" },
     React.createElement(Counter, null),
-    React.createElement(Counter, null)
+    secondCounter && React.createElement(Counter, null),
+    React.createElement("input", {
+      type: "checkbox",
+      checked: secondCounter,
+      onChange: function onChange() {
+        return setSecondCounter(!secondCounter);
+      }
+    })
   );
 }
 

@@ -10,10 +10,17 @@ function Counter() {
 }
 
 export default function App() {
+  const [secondCounter, setSecondCounter] = React.useState(true);
+
   return (
     <div className="app">
       <Counter />
-      <Counter />
+      {secondCounter && <Counter />}
+      <input
+        type="checkbox"
+        checked={secondCounter}
+        onChange={() => setSecondCounter(!secondCounter)}
+      />
     </div>
   );
 }
