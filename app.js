@@ -35,13 +35,18 @@ export default function App() {
     { className: "app" },
     React.createElement(Counter, null),
     secondCounter && React.createElement(Counter, null),
-    React.createElement("input", {
-      type: "checkbox",
-      checked: secondCounter,
-      onChange: function onChange() {
-        return setSecondCounter(!secondCounter);
-      }
-    })
+    React.createElement(
+      "label",
+      null,
+      React.createElement("input", {
+        type: "checkbox",
+        checked: secondCounter,
+        onChange: function onChange() {
+          return setSecondCounter(!secondCounter);
+        }
+      }),
+      "Render the second Counter"
+    )
   );
 }
 

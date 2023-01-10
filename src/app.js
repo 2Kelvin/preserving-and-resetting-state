@@ -16,11 +16,14 @@ export default function App() {
     <div className="app">
       <Counter />
       {secondCounter && <Counter />}
-      <input
-        type="checkbox"
-        checked={secondCounter}
-        onChange={() => setSecondCounter(!secondCounter)}
-      />
+      <label>
+        <input
+          type="checkbox"
+          checked={secondCounter}
+          onChange={() => setSecondCounter(!secondCounter)}
+        />
+        Render the second Counter
+      </label>
     </div>
   );
 }
