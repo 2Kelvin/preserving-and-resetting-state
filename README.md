@@ -1,5 +1,7 @@
 # preserving-and-resetting-state
 
+![preserving state](https://user-images.githubusercontent.com/85868026/211711631-cc088cb5-b842-4aa3-9ac6-ea4b002dafc5.png)
+
 In this read, I learnt:
 
 - from the JSX & React components you make, React creates a `UI tree` which `ReactDOM` uses to `update the browser DOM` and render it
