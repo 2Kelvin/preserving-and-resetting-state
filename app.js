@@ -18,7 +18,7 @@ function Counter() {
       "button",
       { onClick: function onClick() {
           return setCount(count + 1);
-        } },
+        }, className: "button-87" },
       "+ 1"
     )
   );
