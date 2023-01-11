@@ -15,7 +15,7 @@ In this read, I learnt:
 - the reason a functional component should not be defined inside another functional component is because the state of the child (nested) component will always reset whenever the state of the parent changes causing it to rerender as a new parent component. Therefore, `always define functional components at the top level` i.e. `never nest functional component definitions`
 - using `keys` in react tells react to use the key as part of the position of the component in the parent instead of using its order within the parent. `Keys only specify a component's position within its parent`
 - you can force a component & its subtree to reset its state by giving it a unique key. This way, React forces it to rerender when it notices that the key has changed
-- there are 3 ways to preserve the state of removed components:
+- there are `3 ways to preserve the state of removed components`:
   - [x] rendering all components and hiding the ones you don't need shown in the UI using CSS. This is for simple UIs though, since it could het slow when the hidden components grow / contain a lot of DOM nodes
   - [x] lifting the state up. This way, even if the component is removed, it's state stays because it is contained in its parent component
   - [x] initializing & saving state to the local storage
